@@ -6,7 +6,7 @@
 /*   By: edescoin <edescoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/03 16:19:46 by edescoin          #+#    #+#             */
-/*   Updated: 2019/04/30 22:17:03 by edescoin         ###   ########.fr       */
+/*   Updated: 2019/05/01 19:01:41 by edescoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 # define STRUCTURES_H
 # ifndef __APPLE__
 #  include <SDL2/SDL.h>
+#  include <GL/glew.h>
 # else
 #  include "SDL2/SDL.h"
 # endif
 # include <time.h>
 # include <sys/timeb.h>
+
+# include "libft.h"
 
 typedef struct				s_color
 {
@@ -104,6 +107,29 @@ typedef struct				s_obj_material
 											double streching,
 											SDL_Surface *texture);
 }							t_obj_material;
+
+typedef struct				s_vector_vbo
+{
+	GLuint					buffer;
+	int						nb_vectors;
+}							t_vector_vbo;
+
+typedef struct				s_vao
+{
+	GLuint					id;
+	GLuint					vect_vbo_id;
+}							t_vao;
+
+typedef struct				s_programm
+{
+	GLuint					id;
+	long					vertex_shader_id;
+	long					tesselation1_shader_id;
+	long					tesselation2_shader_id;
+	long					geometry_shader_id;
+	long					fragment_shader_id;
+	long					compute_shader_id;
+}							t_programm;
 
 typedef struct				s_object
 {

@@ -6,7 +6,7 @@
 /*   By: edescoin <edescoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/25 10:49:54 by edescoin          #+#    #+#             */
-/*   Updated: 2019/04/30 21:42:56 by edescoin         ###   ########.fr       */
+/*   Updated: 2019/05/01 19:02:33 by edescoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,14 @@
 #  define LINUX			0
 # endif
 
-# define TITLE		"scop"
-# define POW		10000000000
-# define LIMIT		100
-# define WIN_WIDTH	1280
-# define WIN_HEIGHT	700
-# define DEBUG		1
-# define LB			10000
+# define TITLE			"scop"
+# define POW			10000000000
+# define LIMIT			100
+# define WIN_WIDTH		1280
+# define WIN_HEIGHT		700
+# define DEBUG			1
+# define LB				10000
+# define VECT_VBO_INDEX 0
 
 # include <stdlib.h>
 # include <stdio.h>
@@ -41,9 +42,11 @@
 # include "camera.h"
 # include "events.h"
 # include "graphics.h"
+# include "gl_objects.h"
 # include "libft.h"
 # include "matrix.h"
 # include "rendering.h"
+# include "shader.h"
 # include "structures.h"
 # include "vectors.h"
 

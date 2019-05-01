@@ -12,8 +12,7 @@ INCLUDE_DIR=include
 FT_PATH="$$(pwd)/libft"
 SDL_PATH=$$(pwd)/SDL2
 
-SRCS=events.c graphics.c key_functions.c main.c matrix.c matrix_ops2.c \
-matrix_ops3.c matrix_ops.c matrix_transformations.c rendering.c
+SRCS=events.c graphics.c key_functions.c main.c matrix.c matrix_ops2.c matrix_ops3.c matrix_ops.c matrix_transformations.c rendering.c vectors.c vectors2.c vectors3.c gl_objects.c shader.c
 OBJS=$(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
 LIBS=-lft -lm
 LINUX_LIBS=-lSDL2 -lGL -lGLEW
@@ -139,7 +138,6 @@ re: fclean all
 
 linux: $(OBJS)
 	$(CC) $(CFLAGS) $^ -L$(LIB_DIR) $(LIBS) $(LINUX_LIBS)
-#	$(MAKE) clean
 
 debug-mac: $(OBJS)
 	$(CC) $(CFLAGS) $^ `$(SDL_PATH)/SDL2/build/bin/sdl2-config --cflags --libs`\
