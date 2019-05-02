@@ -6,7 +6,7 @@
 /*   By: edescoin <edescoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/18 22:12:52 by edescoin          #+#    #+#             */
-/*   Updated: 2019/04/30 22:56:30 by edescoin         ###   ########.fr       */
+/*   Updated: 2019/05/02 16:00:13 by edescoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	set_color(t_evt_data *data)
 			get_sdl_core()->clearColor = (t_color){0, 0, 1, 1};
 		break;
 	}
-	refresh_window();
+	clear_window();
 	return (1);
 }
 

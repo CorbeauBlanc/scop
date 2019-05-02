@@ -6,7 +6,7 @@
 /*   By: edescoin <edescoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/11 12:52:00 by edescoin          #+#    #+#             */
-/*   Updated: 2019/05/01 17:02:50 by edescoin         ###   ########.fr       */
+/*   Updated: 2019/05/02 16:16:20 by edescoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ double		vect_dot_product(const t_vector v1, const t_vector v2);
 void		vect_normalize(t_vector *v);
 t_vector	v(double x, double y, double z);
 t_vector	v_inv(t_vector	v);
-GLfloat		*vect_to_tab(t_vector vect);
+GLfloat		*vtab_to_ftab(t_vector *vect, size_t size);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: edescoin <edescoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/03 16:19:46 by edescoin          #+#    #+#             */
-/*   Updated: 2019/05/01 19:01:41 by edescoin         ###   ########.fr       */
+/*   Updated: 2019/05/02 18:21:14 by edescoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ typedef struct				s_obj_material
 
 typedef struct				s_vector_vbo
 {
-	GLuint					buffer;
+	GLuint					id;
 	int						nb_vectors;
 }							t_vector_vbo;
 
@@ -118,6 +118,9 @@ typedef struct				s_vao
 {
 	GLuint					id;
 	GLuint					vect_vbo_id;
+	GLuint					col_vbo_id;
+	unsigned long			nb_vectors;
+	unsigned long			nb_colors;
 }							t_vao;
 
 typedef struct				s_programm

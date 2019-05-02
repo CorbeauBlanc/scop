@@ -6,7 +6,7 @@
 /*   By: edescoin <edescoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/25 10:49:54 by edescoin          #+#    #+#             */
-/*   Updated: 2019/05/01 19:02:33 by edescoin         ###   ########.fr       */
+/*   Updated: 2019/05/02 18:18:08 by edescoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@
 # define DEBUG			1
 # define LB				10000
 # define VECT_VBO_INDEX 0
+# define COL_VBO_INDEX 1
 
 # include <stdlib.h>
 # include <stdio.h>

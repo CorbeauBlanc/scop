@@ -6,7 +6,7 @@
 /*   By: edescoin <edescoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/29 12:53:37 by edescoin          #+#    #+#             */
-/*   Updated: 2019/05/01 19:04:04 by edescoin         ###   ########.fr       */
+/*   Updated: 2019/05/02 18:49:57 by edescoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,24 +42,32 @@ int			main(int ac, char **av)
 
 	get_sdl_core();
 	events = NULL;
+	init_list_evts(&events);
 /* 	if (!(scn = parsing(ac, av)))
 		ft_putendl("usage : ./rt file.xml"); */
 
-	t_vector square[4] =
+	t_programm p = new_programm();
+	(void)p;
+
+	t_vector vectors[3] =
 	{
-		{-0.5, 0.5, 0.5 },
-		{ 0.5, 0.5, 0.5 },
-		{ 0.5,-0.5, 0.5 },
-		{-0.5,-0.5, 0.5 },
+		{-1, -1, 0},
+		{1, -1, 0},
+		{0, 1, 0}
 	};
 
-	t_vao vao = new_vao(square, 4);
+	t_color colors[3] =
+	{
+		{1, 0, 0, 1},
+		{0, 1, 0, 1},
+		{0, 0, 1, 1},
+	};
 
-	t_programm prog = new_programm();
-	(void)prog;
+	t_vao vao = new_vao(vectors, 3, colors, 3);
 
-	init_list_evts(&events);
+	draw_vao(vao);
 	refresh_window();
+
 	wait_events(events);
 	clear_events(&events);
 

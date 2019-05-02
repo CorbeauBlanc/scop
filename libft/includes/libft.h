@@ -6,7 +6,7 @@
 /*   By: edescoin <edescoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 16:22:29 by fcecilie          #+#    #+#             */
-/*   Updated: 2019/05/01 19:01:33 by edescoin         ###   ########.fr       */
+/*   Updated: 2019/05/02 17:23:18 by edescoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,8 +129,8 @@ char				*ft_utoa_base(unsigned long long int n, int base, int maj);
 
 int					mod(int x, int y);
 
-void				exit_error(char *prog, char *err);
-void				exit_custom_error(char *prog, char *err);
+void				exit_error(char *prog, char *fct);
+void				exit_custom_error(char *prog, char *fct, char *err);
 
 void				*galloc(size_t size);
 void				gexit(int status);
