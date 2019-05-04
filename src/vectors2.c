@@ -6,7 +6,7 @@
 /*   By: edescoin <edescoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/14 14:45:00 by edescoin          #+#    #+#             */
-/*   Updated: 2019/05/01 16:25:55 by edescoin         ###   ########.fr       */
+/*   Updated: 2019/05/04 20:42:45 by edescoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void		vect_normalize(t_vector *v)
 {
-	double	len;
+	GLfloat	len;
 
 	len = get_vect_lenght(v);
-	*v = (t_vector){v->x / len, v->y / len, v->z / len};
+	*v = (t_vector){v->x / len, v->y / len, v->z / len, v->w};
 }
 
-double		angle_between_vectors(t_vector a, t_vector b)
+GLfloat		angle_between_vectors(t_vector a, t_vector b)
 {
-	double	angle;
-	double	pdt_scalaire;
-	double	dist_a;
-	double	dist_b;
+	GLfloat	angle;
+	GLfloat	pdt_scalaire;
+	GLfloat	dist_a;
+	GLfloat	dist_b;
 
 	dist_a = get_vect_lenght(&a);
 	dist_b = get_vect_lenght(&b);
@@ -36,27 +36,17 @@ double		angle_between_vectors(t_vector a, t_vector b)
 	return (angle);
 }
 
-t_vector	v(double x, double y, double z)
+t_vector	vec3(GLfloat x, GLfloat y, GLfloat z)
 {
-	t_vector	vec;
-
-	vec.x = x;
-	vec.y = y;
-	vec.z = z;
-	return (vec);
+	return ((t_vector){x, y, z, 1});
 }
 
-t_dot		dot(double x, double y, double z)
+t_dot		dot(GLfloat x, GLfloat y, GLfloat z)
 {
-	t_dot	d;
-
-	d.x = x;
-	d.y = y;
-	d.z = z;
-	return (d);
+	return ((t_dot){x, y, z});
 }
 
 t_vector	v_inv(t_vector v)
 {
-	return ((t_vector){-v.x, -v.y, -v.z});
+	return ((t_vector){-v.x, -v.y, -v.z, v.w});
 }

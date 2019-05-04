@@ -6,14 +6,14 @@
 /*   By: edescoin <edescoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/04 16:30:54 by edescoin          #+#    #+#             */
-/*   Updated: 2019/04/30 20:48:40 by edescoin         ###   ########.fr       */
+/*   Updated: 2019/05/02 19:18:15 by edescoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 #include <math.h>
 
-double		get_det_3x3mat(t_matrix *m)
+GLfloat		get_det_3x3mat(t_matrix *m)
 {
 	if (m->c < 3 || m->r < 3)
 		return (0);
@@ -27,8 +27,8 @@ double		get_det_3x3mat(t_matrix *m)
 
 t_matrix	*get_inv_3x3mat(t_matrix *res, t_matrix *m)
 {
-	double			tmp[3][3];
-	const double	d = get_det_3x3mat(m);
+	GLfloat			tmp[3][3];
+	const GLfloat	d = get_det_3x3mat(m);
 	int				i;
 	int				j;
 
@@ -99,8 +99,8 @@ t_matrix	*add_matrix(t_matrix **res, t_matrix *m1, t_matrix *m2)
 
 t_matrix	*get_inv_2x2mat(t_matrix **res, t_matrix *m)
 {
-	double	tmp[2][2];
-	double	d;
+	GLfloat	tmp[2][2];
+	GLfloat	d;
 
 	if (!res ||
 		!(d = (m->mat[0][0] * m->mat[1][1] - m->mat[0][1] * m->mat[1][0])))

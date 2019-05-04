@@ -6,20 +6,20 @@
 /*   By: edescoin <edescoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/04 16:30:54 by edescoin          #+#    #+#             */
-/*   Updated: 2019/04/30 20:48:56 by edescoin         ###   ########.fr       */
+/*   Updated: 2019/05/02 19:18:15 by edescoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 #include <math.h>
 
-static double	**set_2x2mat_tab(double **dst, t_matrix *m, int i, int j)
+static GLfloat	**set_2x2mat_tab(GLfloat **dst, t_matrix *m, int i, int j)
 {
 	if (!dst)
 	{
-		dst = (double**)malloc(2 * sizeof(double*));
-		dst[0] = (double*)malloc(2 * sizeof(double));
-		dst[1] = (double*)malloc(2 * sizeof(double));
+		dst = (GLfloat**)malloc(2 * sizeof(GLfloat*));
+		dst[0] = (GLfloat*)malloc(2 * sizeof(GLfloat));
+		dst[1] = (GLfloat*)malloc(2 * sizeof(GLfloat));
 	}
 	if (i < m->r && (i + 1) < m->r && j < m->c && (j + 1) < m->c)
 	{
@@ -31,7 +31,7 @@ static double	**set_2x2mat_tab(double **dst, t_matrix *m, int i, int j)
 	return (dst);
 }
 
-static void		set_2x2tab_mat(t_matrix *dst, double **tab, int i, int j)
+static void		set_2x2tab_mat(t_matrix *dst, GLfloat **tab, int i, int j)
 {
 	if (i < dst->r && (i + 1) < dst->r && j < dst->c && (j + 1) < dst->c)
 	{

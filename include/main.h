@@ -6,7 +6,7 @@
 /*   By: edescoin <edescoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/25 10:49:54 by edescoin          #+#    #+#             */
-/*   Updated: 2019/05/02 18:18:08 by edescoin         ###   ########.fr       */
+/*   Updated: 2019/05/04 17:37:12 by edescoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@
 # define TITLE			"scop"
 # define POW			10000000000
 # define LIMIT			100
-# define WIN_WIDTH		1280
-# define WIN_HEIGHT		700
+# define WIN_WIDTH		900
+# define WIN_HEIGHT		900
 # define DEBUG			1
 # define LB				10000
 # define VECT_VBO_INDEX 0

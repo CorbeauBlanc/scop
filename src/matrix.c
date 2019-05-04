@@ -6,7 +6,7 @@
 /*   By: edescoin <edescoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/09 17:14:48 by edescoin          #+#    #+#             */
-/*   Updated: 2019/04/30 20:51:33 by edescoin         ###   ########.fr       */
+/*   Updated: 2019/05/02 19:18:15 by edescoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void		clear_matrix(t_matrix *mat)
 	}
 }
 
-t_matrix	*new_matrix(double **mat, int r, int c)
+t_matrix	*new_matrix(GLfloat **mat, int r, int c)
 {
 	t_matrix	*matrix;
 	int			i;
@@ -37,11 +37,11 @@ t_matrix	*new_matrix(double **mat, int r, int c)
 	matrix->c = c;
 	if (!mat)
 	{
-		if (!(matrix->mat = (double**)malloc(r * sizeof(double*))))
+		if (!(matrix->mat = (GLfloat**)malloc(r * sizeof(GLfloat*))))
 			exit_error("rt", "malloc");
 		i = -1;
 		while (++i < r)
-			if (!(matrix->mat[i] = (double*)malloc(c * sizeof(double))))
+			if (!(matrix->mat[i] = (GLfloat*)malloc(c * sizeof(GLfloat))))
 				exit_error("rt", "malloc");
 		clear_matrix(matrix);
 	}

@@ -6,7 +6,7 @@
 /*   By: edescoin <edescoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/03 16:19:46 by edescoin          #+#    #+#             */
-/*   Updated: 2019/05/02 18:21:14 by edescoin         ###   ########.fr       */
+/*   Updated: 2019/05/04 20:43:12 by edescoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ typedef struct				s_evt_data
 
 typedef struct				s_matrix
 {
-	double					**mat;
+	GLfloat					**mat;
 	int						r;
 	int						c;
 }							t_matrix;
@@ -75,12 +75,18 @@ typedef struct				s_la_norme_ce_putain_de_cancer
 
 typedef struct				s_vector
 {
-	double					x;
-	double					y;
-	double					z;
+	GLfloat					x;
+	GLfloat					y;
+	GLfloat					z;
+	GLfloat					w;
 }							t_vector;
 
-typedef struct				s_vector t_dot;
+typedef struct				s_dot
+{
+	GLfloat					x;
+	GLfloat					y;
+	GLfloat					z;
+}							t_dot;
 
 typedef struct				s_trans_data
 {

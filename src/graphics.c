@@ -6,7 +6,7 @@
 /*   By: edescoin <edescoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/03 16:52:28 by edescoin          #+#    #+#             */
-/*   Updated: 2019/05/02 17:58:35 by edescoin         ###   ########.fr       */
+/*   Updated: 2019/05/04 17:46:26 by edescoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ t_sdl_core	*get_sdl_core(void)
 		!(core->context = SDL_GL_CreateContext(core->window)))
 		exit_custom_error("SDL2: ", "get_sdl_core", (char*)SDL_GetError());
 	init_glew();
+	glViewport(0, 0, WIN_WIDTH, WIN_HEIGHT);
 	return (core);
 }
 

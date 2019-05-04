@@ -6,14 +6,14 @@
 /*   By: edescoin <edescoin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/13 21:19:18 by edescoin          #+#    #+#             */
-/*   Updated: 2019/04/30 20:49:24 by edescoin         ###   ########.fr       */
+/*   Updated: 2019/05/02 19:18:15 by edescoin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 #include <math.h>
 
-void	translation(t_matrix **mtx, double x, double y, double z)
+void	translation(t_matrix **mtx, GLfloat x, GLfloat y, GLfloat z)
 {
 	t_matrix	*tmp;
 	t_matrix	*res;
@@ -29,7 +29,7 @@ void	translation(t_matrix **mtx, double x, double y, double z)
 	*mtx = res;
 }
 
-void	scale(t_matrix **mtx, double x, double y, double z)
+void	scale(t_matrix **mtx, GLfloat x, GLfloat y, GLfloat z)
 {
 	t_matrix	*tmp;
 	t_matrix	*res;
@@ -45,7 +45,7 @@ void	scale(t_matrix **mtx, double x, double y, double z)
 	*mtx = res;
 }
 
-void	x_rotation(t_matrix **mtx, double theta)
+void	x_rotation(t_matrix **mtx, GLfloat theta)
 {
 	t_matrix	*tmp;
 	t_matrix	*res;
@@ -63,7 +63,7 @@ void	x_rotation(t_matrix **mtx, double theta)
 	*mtx = res;
 }
 
-void	y_rotation(t_matrix **mtx, double theta)
+void	y_rotation(t_matrix **mtx, GLfloat theta)
 {
 	t_matrix	*tmp;
 	t_matrix	*res;
@@ -81,7 +81,7 @@ void	y_rotation(t_matrix **mtx, double theta)
 	*mtx = res;
 }
 
-void	z_rotation(t_matrix **mtx, double theta)
+void	z_rotation(t_matrix **mtx, GLfloat theta)
 {
 	t_matrix	*tmp;
 	t_matrix	*res;
